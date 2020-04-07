@@ -9129,15 +9129,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -12519,7 +12519,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -13033,14 +13033,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -13083,6 +13083,7 @@ div#notebook {
 <span class="c1"># install.packages(&quot;GGally&quot;)   </span>
 <span class="c1"># install.packages(&quot;caret&quot;)</span>
 <span class="c1"># install.packages(&#39;e1071&#39;, dependencies=TRUE)</span>
+
 <span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">caret</span><span class="p">)</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
@@ -13129,7 +13130,7 @@ The following object is masked from ‘package:purrr’:
 
 
 Registered S3 method overwritten by &#39;GGally&#39;:
-  method from   
+  method from
   +.gg   ggplot2
 
 
@@ -13167,6 +13168,11 @@ The following object is masked from ‘package:dplyr’:
 <li>Jennifer Zhang</li>
 <li>Huy Pham</li>
 </ul>
+<p><strong>Found at:</strong></p>
+<ul>
+<li>Jupyter Notebook: <a href="https://github.com/NicTavares/dsci100project/blob/master/Report.ipynb">https://github.com/NicTavares/dsci100project/blob/master/Report.ipynb</a>    </li>
+<li>HTML: <a href="https://github.com/NicTavares/dsci100project/blob/master/Report.html">https://github.com/NicTavares/dsci100project/blob/master/Report.html</a></li>
+</ul>
 
 </div>
 </div>
@@ -13181,9 +13187,9 @@ The following object is masked from ‘package:dplyr’:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The US Open grand slam tennis tournament has an estimated total prize money pool of USD $50.4 million. This puts it in line with high-value tournaments such as the MLB World Series and the PGA FedEx Cup. With such a high potential payoff, there is much incentive for competitive tennis athletes, coaches and potential sponsors to understand the player attributes that contribute to tournament success<sup>1</sup>.</p>
-<p>The purpose of the study is to determine whether certain attributes contribute to greater competitive success by analyzing player and match information. In addition, this analysis will also verify the accuracy of hypothesis made by academic scholars. For example, according to Sports Mechanics journal, height significantly affects players' serve speed, which in turn boost their odds of winning<sup>2</sup>. Another common claim is that the "prime" age ranges from 27 to 31 in which players perform at their very peak<sup>3</sup>.</p>
-<p>We hope to find the answers to these questions by analyzing a comprehensive dataset contains results from nearly 7,000 matches of the top 500 tennis players in different tournaments from 2017 to 2019. This dataset includes match lengths, winner and loser's dominant hands, ages, heights and their number of aces<sup>4</sup>. The selection of this attributes is based on the assumed low correlation between variables and the heated controversy surrounding their roles in players' performance.</p>
+<p>The US Open grand slam tennis tournament has an estimated total prize money pool of USD $50.4 million<sup>3</sup>. This puts it in line with high-value tournaments such as the MLB World Series and the PGA FedEx Cup. According to Sports Mechanics journal, height significantly affects players' serve speed, which in turn boost their odds of winning<sup>1</sup>. Another common claim is that the "prime" age ranges from 27 to 31 in which players perform at their very peak<sup>2</sup>. With such a high potential payoff, there is much incentive for competitive tennis athletes, coaches and potential sponsors to understand the player attributes that contribute to tournament success.</p>
+<p>The purpose of the study is to determine whether certain attributes contribute to greater competitive success by analyzing player and match information. This project will study the data of tennis match results collected for the top 500 tennis players from 2017-2019. Further, we will classify the attributes of interest and test whether the potential match outcome of a given player, within an acceptable margin of error, can be predicted. Finally, the results of this study will be used to verify the hypotheses made by the sources above.</p>
+<p>We hope to find the answers to these questions by analyzing a comprehensive dataset contains results from nearly 7,000 matches of the top 500 tennis players in different tournaments. This dataset includes match lengths, winner and loser's dominant hands, ages, heights and their number of aces<sup>4</sup>. The selection of these attributes is based on the assumed low correlation between variables and the heated controversy surrounding their role in players' performance.</p>
 
 </div>
 </div>
@@ -13205,8 +13211,8 @@ The following object is masked from ‘package:dplyr’:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For this research we will be using the K Nearest Neighbour (KNN) classification approach, as we are interested in classifying a categorical variable (wins and losses).</p>
-<p>The other predictive methods taught in this course, KNN regression and linear regression, are used to predict numeric (quantitative) values. As we do not have a quantitative variable to predict, these techniques are not useful in answering the questions this research seeks to answer.</p>
+<p>In this study, we are interested in classifying a categorical variable (wins and losses). K Nearest Neighbour (KNN) Classification is a non-parametric, lazy learning algorithm. Its purpose is to use a database in which the data points are separated into several classes to predict the classification of a new sample point. Therefore, we will use the KNN approach as we intend to classify variables by match outcomes.</p>
+<p>Other predictive methods taught in this course, KNN regression and linear regression, are used to predict numeric (quantitative) values. As we do not have a quantitative variable to predict, these techniques are not useful in answering the questions this research seeks to answer.</p>
 
 </div>
 </div>
@@ -13221,7 +13227,8 @@ The following object is masked from ‘package:dplyr’:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The tennis player data available on Jeff Sackmann's GitHub<sup>4</sup> is split into CSV files per year. To begin, we will use the <code>read_csv()</code> function to scrape the data from the web and use <code>rbind()</code> to combine the three dataframes into a single one.</p>
+<p>We will start by loading the dataset from an online repository.</p>
+<p>The tennis player data is available on Jeff Sackmann's GitHub<sup>4</sup> and is split into CSV files by year. To begin, we will use the <code>read_csv()</code> function to scrape the data from the web and use <code>rbind()</code> to combine the three dataframes into a single one.</p>
 
 </div>
 </div>
@@ -13263,7 +13270,7 @@ The following object is masked from ‘package:dplyr’:
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">tennis</span> <span class="o">&lt;-</span> <span class="n">combined_data</span> <span class="o">%&gt;%</span> 
+<div class=" highlight hl-r"><pre><span></span><span class="n">tennis</span> <span class="o">&lt;-</span> <span class="n">combined_data</span> <span class="o">%&gt;%</span>
     <span class="nf">select</span><span class="p">(</span><span class="n">winner_hand</span><span class="p">,</span> <span class="n">loser_hand</span><span class="p">,</span> <span class="n">winner_age</span><span class="p">,</span> <span class="n">loser_age</span><span class="p">,</span> <span class="n">winner_ht</span><span class="p">,</span> <span class="n">loser_ht</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="n">w_ace</span><span class="p">,</span> <span class="n">l_ace</span><span class="p">)</span>
 
 <span class="n">tennis_win</span> <span class="o">=</span> <span class="nf">select</span><span class="p">(</span><span class="n">tennis</span><span class="p">,</span> <span class="n">winner_hand</span><span class="p">,</span> <span class="n">winner_age</span><span class="p">,</span> <span class="n">winner_ht</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="n">w_ace</span><span class="p">)</span>
@@ -13353,8 +13360,11 @@ The following object is masked from ‘package:dplyr’:
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Next, we separate the tidied data into a training_set and a testing_set. The training_set will be given 0.75 of the cleaned_data set; testing_set will be given 0.25. This is so that our model is trained against the training set and we can later perform cross-validation with a testing set to find an optimal k-value.</p>
 <p>We will use the <code>createDataPartition()</code> function and the <code>slice()</code> function to split the data into two sets.</p>
-<p><strong>Note:</strong> We have opted to omit entries containing <code>NA</code> values. This is to prevent issues from occurring with our training model later on.<br>
-<strong>Note:</strong> <code>createDataPartition()</code> uses random sampling to select rows. We have chosen to include <code>set.seed(42)</code> so that the results are reproducible for anyone who runs the .ipynb notebook.</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>We have opted to omit entries containing <code>NA</code> values. This is to prevent issues from occurring with our training model later on.   </li>
+<li><code>createDataPartition()</code> uses random sampling to select rows. We have chosen to include <code>set.seed(42)</code> so that the results are reproducible for anyone who runs the .ipynb notebook.</li>
+</ul>
 
 </div>
 </div>
@@ -13367,7 +13377,7 @@ The following object is masked from ‘package:dplyr’:
 <div class=" highlight hl-r"><pre><span></span><span class="nf">set.seed</span><span class="p">(</span><span class="m">42</span><span class="p">)</span>
 
 <span class="n">training_rows</span> <span class="o">&lt;-</span> <span class="n">cleaned_data</span> <span class="o">%&gt;%</span>
-    <span class="nf">select</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+    <span class="nf">select</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">%&gt;%</span>
     <span class="nf">unlist</span><span class="p">()</span> <span class="o">%&gt;%</span>
     <span class="nf">createDataPartition </span><span class="p">(</span><span class="n">p</span> <span class="o">=</span> <span class="m">0.75</span> <span class="p">,</span> <span class="n">list</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
 
@@ -13418,13 +13428,6 @@ The following object is masked from ‘package:dplyr’:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="2.5-Dataset-Visualization">2.5 Dataset Visualization<a class="anchor-link" href="#2.5-Dataset-Visualization">&#182;</a></h3>
 </div>
 </div>
@@ -13432,11 +13435,13 @@ The following object is masked from ‘package:dplyr’:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now that the sets have been partitioned, we plot a matrix of the parameters that which we will later use to perform analysis of predicted player match outcomes.</p>
-<p>There are two goals we want to achieve with our visualization:</p>
-<p>The correlation between our predicting variables. If one variable is highly correlated to another, we may eliminate them and simplify the modelling process.
-The correlation between our predicting variables with our labeling variables.
-We achieve this by using the <code>ggpair()</code> and <code>ggcorr()</code> functions. While <code>ggpair()</code> gives us a comprehensive view of how each variable correlates to each other through histograms, box plots, regression model and more, <code>ggcorr()</code> provides a more straightforward matrix with results of correlation between variables</p>
+<p>Now that the sets have been partitioned, we plot a matrix of the parameters that will later be used to perform analysis of predicted player match outcomes.</p>
+<hr>
+<p>The two goals that we want to achieve with our visualization are the following:</p>
+<ul>
+<li>The correlation between our predicting variables. If one variable is highly correlated to another, we may eliminate them and simplify the modelling process. We achieve this by using the <code>ggcorr()</code> function.</li>
+<li>The correlation between our predicting variables with our labeling variables. We achieve this by using the <code>ggpair()</code> function. While <code>ggcorr()</code> provides a straightforward matrix with results of correlation between variables, <code>ggpair()</code> gives us a comprehensive view of how each variable correlates to each other through histograms, box plots, regression model and more.</li>
+</ul>
 
 </div>
 </div>
@@ -18244,7 +18249,13 @@ height=420
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>An intersting point to note is that the histogram distributions for <code>Minutes</code>, <code>Age</code>, <code>Height</code>, and <code>Aces</code> do not appear to vary for each <code>result</code> outcome. We will keep this in mind when performing our analysis later.</p>
+<p>An intersting observation to note in the <strong>Matrix of Parameter Comparisons</strong> above is that visually, the distributions of <code>Minutes</code>, <code>Age</code>, <code>Height</code>, and <code>Aces</code> do not appear to vary for each winning and losing <code>result</code>. We will keep this in mind when performing our analysis later.</p>
+<p>Some additional comments about the observations above:</p>
+<ul>
+<li>There is an imbalance in the number of winners and losers. This is due to <code>NA</code> values being removed in <em>2.4 Splitting and Summarizing</em>. While this may influence our data ever so slightly (as we will be training our KNN classification model with more observations of winners than losers), we will not account for the difference for the purposes of the experiment as the difference is small.</li>
+<li>There is little correlation between the various parameters as seen in the <strong>Training Data Correlations</strong> matrix.</li>
+<li>Upon visual inspection, there does not appear to be any obvious clustering in any of the scatterplots. </li>
+</ul>
 
 </div>
 </div>
@@ -18252,7 +18263,15 @@ height=420
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>After the first plots we create some basic tables to look at the number of left handed players vs right handed players - which shows that there are way more right handed players which is something to keep in mind later. Then we create a table that shows the mean value of each of the predictor variables we are using.</p>
+<h3 id="2.6-Dataset-Numerical-Summaries">2.6 Dataset Numerical Summaries<a class="anchor-link" href="#2.6-Dataset-Numerical-Summaries">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Next, we will create some basic tables so that we can observe the number of left-handed players vs. right-handed players and the summary statistics of each of the predictor variables we are using.</p>
+<p>In the tables below, we will see that there are more right handed players, which is something to keep in mind later.</p>
 
 </div>
 </div>
@@ -18268,7 +18287,7 @@ height=420
 
 <span class="n">quantitative_summary_table</span> <span class="o">&lt;-</span> <span class="n">training_set</span> <span class="o">%&gt;%</span>
     <span class="nf">select_if</span><span class="p">(</span><span class="n">is.numeric</span><span class="p">)</span>  <span class="o">%&gt;%</span>
-    <span class="nf">map</span><span class="p">(</span><span class="o">~</span><span class="nf">tidy</span><span class="p">(</span><span class="nf">summary</span><span class="p">(</span><span class="n">.x</span><span class="p">)))</span> <span class="o">%&gt;%</span>  
+    <span class="nf">map</span><span class="p">(</span><span class="o">~</span><span class="nf">tidy</span><span class="p">(</span><span class="nf">summary</span><span class="p">(</span><span class="n">.x</span><span class="p">)))</span> <span class="o">%&gt;%</span>
     <span class="nf">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span> <span class="n">.)</span> <span class="o">%&gt;%</span>
     <span class="nf">t</span><span class="p">()</span>
 <span class="n">quantitative_summary_table</span>
@@ -18338,21 +18357,14 @@ height=420
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-
+<h3 id="2.7-Classification-Model-Tuning">2.7 Classification Model Tuning<a class="anchor-link" href="#2.7-Classification-Model-Tuning">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.6-Classification-Model-Tuning">2.6 Classification Model Tuning<a class="anchor-link" href="#2.6-Classification-Model-Tuning">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In order to perform k-nn classification we first need to alter the hand column to be numeric and not categorical and then we need to scale our data so that we don't over or under weight certain characteristics based on the unit they were measured in. We have arbitrarily chosen 1 to represent right handed and 0 to represent left handed.</p>
+<p>In order to perform KNN classification, we first need to alter the <code>hand</code> column to be a numerical value instead of a categorical value. Then, we will need to scale our data so that no characteristics are overweight or underweight based on the unit in which they were measured. We have arbitrarily chosen <code>1</code> to represent right-handed players and <code>0</code> to represent left-handed players.</p>
 
 </div>
 </div>
@@ -18364,7 +18376,7 @@ height=420
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">training_data_scaled</span> <span class="o">=</span> <span class="n">training_set</span> <span class="o">%&gt;%</span> <span class="nf">mutate</span><span class="p">(</span><span class="n">hand</span> <span class="o">=</span> <span class="nf">ifelse</span><span class="p">(</span><span class="n">hand</span> <span class="o">==</span> <span class="s">&quot;R&quot;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">))</span>
 
-<span class="n">training_data_scaled</span> <span class="o">=</span> <span class="n">training_data_scaled</span> <span class="o">%&gt;%</span> 
+<span class="n">training_data_scaled</span> <span class="o">=</span> <span class="n">training_data_scaled</span> <span class="o">%&gt;%</span>
                         <span class="nf">mutate</span><span class="p">(</span><span class="n">minutes</span> <span class="o">=</span> <span class="nf">scale</span><span class="p">(</span><span class="n">minutes</span><span class="p">,</span> <span class="n">center</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span> <span class="o">%&gt;%</span>
                         <span class="nf">mutate</span><span class="p">(</span><span class="n">age</span> <span class="o">=</span> <span class="nf">scale</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="n">center</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span> <span class="o">%&gt;%</span>
                         <span class="nf">mutate</span><span class="p">(</span><span class="n">height</span> <span class="o">=</span> <span class="nf">scale</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">center</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span> <span class="o">%&gt;%</span>
@@ -18372,7 +18384,7 @@ height=420
 
 <span class="n">testing_data_scaled</span> <span class="o">=</span> <span class="n">testing_set</span> <span class="o">%&gt;%</span> <span class="nf">mutate</span><span class="p">(</span><span class="n">hand</span> <span class="o">=</span> <span class="nf">ifelse</span><span class="p">(</span><span class="n">hand</span> <span class="o">==</span> <span class="s">&quot;R&quot;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">))</span>
 
-<span class="n">testing_data_scaled</span> <span class="o">=</span> <span class="n">testing_data_scaled</span> <span class="o">%&gt;%</span> 
+<span class="n">testing_data_scaled</span> <span class="o">=</span> <span class="n">testing_data_scaled</span> <span class="o">%&gt;%</span>
                         <span class="nf">mutate</span><span class="p">(</span><span class="n">minutes</span> <span class="o">=</span> <span class="nf">scale</span><span class="p">(</span><span class="n">minutes</span><span class="p">,</span> <span class="n">center</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span> <span class="o">%&gt;%</span>
                         <span class="nf">mutate</span><span class="p">(</span><span class="n">age</span> <span class="o">=</span> <span class="nf">scale</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="n">center</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span> <span class="o">%&gt;%</span>
                         <span class="nf">mutate</span><span class="p">(</span><span class="n">height</span> <span class="o">=</span> <span class="nf">scale</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">center</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span> <span class="o">%&gt;%</span>
@@ -18494,8 +18506,8 @@ height=420
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now we will be using our training data to build a model. First thing we need to do is choose a number k that represents the number of neighbors we will be examining in order to determine the classification of a new data point. We will be evaluating k in the range of 1:50 and using 10 fold cross validation.</p>
-<p><strong>Note:</strong> We have chosen to include <code>set.seed(42)</code> so that the results below are reproducible for anyone who runs the .ipynb notebook.</p>
+<p>Next, we will be using our training data to build a model. First thing we need to do is choose a number k that represents the number of neighbors we will be examining in order to determine the classification of a new data point. We will be evaluating <code>k</code> in the range of 1:50 and using 10-fold cross validation.</p>
+<p><strong>Note:</strong> We have chosen to include <code>set.seed(42)</code> so that the results below are reproducible for anyone who runs this .ipynb notebook in the future.</p>
 
 </div>
 </div>
@@ -18528,18 +18540,18 @@ height=420
 
 
 <div class="output_text output_subarea ">
-<pre>k-Nearest Neighbors 
+<pre>k-Nearest Neighbors
 
 8057 samples
    5 predictor
-   2 classes: &#39;l&#39;, &#39;w&#39; 
+   2 classes: &#39;l&#39;, &#39;w&#39;
 
 No pre-processing
-Resampling: Cross-Validated (10 fold) 
-Summary of sample sizes: 7252, 7251, 7252, 7251, 7251, 7252, ... 
+Resampling: Cross-Validated (10 fold)
+Summary of sample sizes: 7252, 7251, 7252, 7251, 7251, 7252, ...
 Resampling results across tuning parameters:
 
-  k   Accuracy   Kappa     
+  k   Accuracy   Kappa
    1  0.5402793  0.07775677
    2  0.5444976  0.08599670
    3  0.5528148  0.10138823
@@ -18604,7 +18616,7 @@ The final value used for the model was k = 21.</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now we can plot the accuracies for our various k values.</p>
+<p>Now, we will plot the accuracies for our various k values and visually determine the value of <code>k</code> for which the maximum accuracy is achieved.</p>
 
 </div>
 </div>
@@ -19416,7 +19428,7 @@ height=300
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As seen in the plot above, <code>k = 21</code> gives us the highest accuracy out of the values we tested.</p>
-<p>=&gt; Choose <code>k = 21</code> for our model.</p>
+<p><strong>Select <code>k = 21</code> for our model.</strong></p>
 
 </div>
 </div>
@@ -19424,7 +19436,7 @@ height=300
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.7-Classification-Model-Evaluation">2.7 Classification Model Evaluation<a class="anchor-link" href="#2.7-Classification-Model-Evaluation">&#182;</a></h3>
+<h3 id="2.8-Classification-Model-Evaluation">2.8 Classification Model Evaluation<a class="anchor-link" href="#2.8-Classification-Model-Evaluation">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -19505,26 +19517,26 @@ height=300
 Prediction   l   w
          l 663 525
          w 589 910
-                                          
-               Accuracy : 0.5854          
+
+               Accuracy : 0.5854
                  95% CI : (0.5665, 0.6041)
-    No Information Rate : 0.5341          
-    P-Value [Acc &gt; NIR] : 4.8e-08         
-                                          
-                  Kappa : 0.1642          
-                                          
- Mcnemar&#39;s Test P-Value : 0.05909         
-                                          
-            Sensitivity : 0.5296          
-            Specificity : 0.6341          
-         Pos Pred Value : 0.5581          
-         Neg Pred Value : 0.6071          
-             Prevalence : 0.4659          
-         Detection Rate : 0.2467          
-   Detection Prevalence : 0.4421          
-      Balanced Accuracy : 0.5818          
-                                          
-       &#39;Positive&#39; Class : l               
+    No Information Rate : 0.5341
+    P-Value [Acc &gt; NIR] : 4.8e-08
+
+                  Kappa : 0.1642
+
+ Mcnemar&#39;s Test P-Value : 0.05909
+
+            Sensitivity : 0.5296
+            Specificity : 0.6341
+         Pos Pred Value : 0.5581
+         Neg Pred Value : 0.6071
+             Prevalence : 0.4659
+         Detection Rate : 0.2467
+   Detection Prevalence : 0.4421
+      Balanced Accuracy : 0.5818
+
+       &#39;Positive&#39; Class : l
                                           </pre>
 </div>
 
@@ -19533,6 +19545,18 @@ Prediction   l   w
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>From the confusion matrix generated above, we will note the following observations:</p>
+<ul>
+<li>The accuracy of our KNN classification model when tested against our test set is <code>58.54%</code>. This is quite a low value. </li>
+<li>The 95% confidence interval is: $CI \in [0.5665, 0.6041]$. The confidence interval describes the range in which we are 95% <em>confident</em> that the true accuracy lies. In plain words, this means it is highly unlikely that the true accuracy of our model exceeds <code>60%</code>.</li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -19551,8 +19575,8 @@ Prediction   l   w
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The success rate of our classification model at predicting the match outcome from our training data was <code>58.54%</code>. This accuracy is only marginally higher than a coin flip (ie. 50% chance) and is not significant enough such that we can recommend its use for predicting successful matches.</p>
-<p>We were also interested in determining whether certain attributes contributed towards greater match success. As we saw in the Matrix of Parameter Comparisons in <em>2.4 Dataset Visualization</em>, there was no significant correlation between the parameters <code>Minutes</code>, <code>Age</code>, <code>Height</code>, <code>Aces</code> with the actual <code>Result</code>. This is further augmented by the low accuracy of the classification model seen in <em>2.6 Classification Model Evaluation</em>.</p>
+<p>The success rate of our classification model at predicting the match outcome from our training data was <code>58.54%</code>. This accuracy is only marginally higher than a coin flip (ie. 50% probability of a binary outcome), and <strong>therefore is not significant enough such that we can recommend its use for predicting successful matches</strong>.</p>
+<p>We were also interested in determining whether certain attributes contributed towards greater match success. As we saw in the Matrix of Parameter Comparisons in <em>2.5 Dataset Visualization</em>, there was no significant correlation between the parameters <code>Minutes</code>, <code>Age</code>, <code>Height</code>, <code>Aces</code> with the actual <code>Result</code>. This is further augmented by the low accuracy of the classification model found in <em>2.8 Classification Model Evaluation</em>.</p>
 <p>The results observed from the classification model and the correlation matrix suggests that the <code>Minutes</code>, <code>Age</code>, <code>Height</code> and <code>Aces</code> parameters are not effective predictors of tennis match success.</p>
 
 </div>
@@ -19569,8 +19593,8 @@ Prediction   l   w
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In the initial stages of our project, we hypothesized that certain attributes would contribute to greater or lesser tennis match success. As mentioned in the <em>Introduction</em>, age can be a key variable that determined success. For instance, it was conceivable that younger players perform better than older players; therefore, age correlates inversely with match success.</p>
-<p>From analyzing the quantitative player and match data, we expected to predict the outcome of any future tennis match with a high degree of accuracy.</p>
-<p>Given the discovery that our model only performs slightly better than a coin flip (as seen in <strong>(figure x)</strong>), and more specifically, the distributions of ages of winners and losers are nearly identical (as seen in figure y), the results of our test show that there is no strong correlation between any of our test parameters and match success.</p>
+<p>From analyzing the quantitative player and match data, we had hoped to successfully predict the outcome of any future tennis match with a relatively high level of accuracy.</p>
+<p>Given the discovery that our model only performs slightly better than a coin flip (seen in the <em>Confusion Matrix and Statistics</em> figure in <em>2.8 Classification Model Evaulation</em>), and more specifically, the distributions of ages of winners and losers are nearly identical (seen in the <em>Matrix of Parameter Comparisons</em> figure in <em>2.5 Dataset Visualization</em>), the results of our test show that there is no strong correlation between any of our test parameters and match success.</p>
 
 </div>
 </div>
@@ -19585,12 +19609,11 @@ Prediction   l   w
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If our original expectations of this research had turned out to be correct it could have been an extremely useful tool for coaches to evaluate the prospects of up and coming players as well as companies looking to get early and high value sponsorships with up and coming players. However, it seems like predicting tennis match outcomes, if possible at all, will require much more in depth analysis of variables. Future research might take into account more quantitative variables such as play style and pair them with the variables that were used in this research to examine the ways that players' playstyles change based on the various physical attributes of the player and further examine how these things affect tennis match results.</p>
-<p>The result of our findings clearly suggests that <code>Minutes</code>, <code>Age</code>, <code>Height</code>, <code>Aces</code> alone cannot predict the outcome of a given match. If our original expectations of this research had turned out to be correct, it potentially could have been a useful tool for coaches to evaluate the prospects of new players as well as companies looking to get early and high value sponsorships with up and coming players.</p>
-<p>However, it is important to note that these results do not disqualify the influence of these characteristics in individual matches. This experiment looked at whether the given parameters alone had overall predictive validity and did not examine them at the individual match level. For example, rather than asking, "do winners of tennis matches tend to be younger?", a future experiment could ask, "do younger tennis players have a higher tendency of winning against older players?"</p>
-<p>The above context could be summarized in the following sentence: <strong>"player characteristics alone cannot predict the probability of overall match success; however, they may have the potential to influence the success of the individual match depending on the characteristics of the opponent."</strong></p>
-<p>This opens the door to future research whereby individual matches can be analyzed for the quantitative differences between the winner and loser. An example of this research could be, "do left-handed players have a higher probability of defeating right-handed opponents than left-handed opponents?" or "does the age difference between match opponents influence the outcome?"</p>
-<p>Finally, future research might also consider additional quantitative variables, such as play style, and pair them with the variables that were used in this research to examine the ways it interacts with the various physical attributes of the player and how they affect tennis match results.</p>
+<p>If our original expectations of this research had proved true, it may have been an extremely useful tool for coaches to evaluate the prospects of potential rising tennis stars and for companies to get early and high value sponsorships with up and coming players. However, the results of this study suggest that predicting tennis match outcomes, if possible, will require more in depth analysis of inter-match and player variables.</p>
+<p>While the result of our findings clearly suggests that <code>Minutes</code>, <code>Age</code>, <code>Height</code>, <code>Aces</code> alone cannot predict the outcome of a given match, it is important to note that these results do not disqualify the influence of these characteristics at a per-match level. This experiment examined whether the given parameters alone had overall predictive validity and did not examine them at the individual match level. For example, rather than asking, "do winners of tennis matches tend to be younger?", a future experiment could ask, "do younger tennis players have a higher tendency of winning against older players?"</p>
+<p>The above context could be summarized in the following sentence: <em>player characteristics alone cannot predict the probability of overall match success; however, they may have the potential to influence the success of the individual match depending on the characteristics of the opponent.</em></p>
+<p>This opens the door to future research whereby individual matches are analyzed for the quantitative differences between the winner and loser. An example of this research could be, "do left-handed players have a higher probability of defeating right-handed opponents than left-handed opponents?" or "does the age difference between match opponents influence the outcome?"</p>
+<p>Finally, future research may account for additional quantitative variables such as play style, and pair them with the variables that were used in this research to examine the methods in which playstyles are affected by physical attributes of the player and further examine how these interactions affect tennis match results.</p>
 
 </div>
 </div>
@@ -19605,9 +19628,9 @@ Prediction   l   w
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><sup>1</sup> 10 Sporting events with the most prize money. (2017, September 10). PledgeSports. Retrieved from: <a href="https://www.pledgesports.org/2017/09/10-sporting-events-with-the-biggest-prize-money/">https://www.pledgesports.org/2017/09/10-sporting-events-with-the-biggest-prize-money/</a></p>
-<p><sup>2</sup> Vaverka, Frantisek &amp; Cernosek, Miroslav (2013). Association between body height and serve speed in elite tennis players. Sports Biomech, 12, 30-7, DOI: 10.1080/14763141.2012.670664.</p>
-<p><sup>3</sup> César Gallo-Salazar, Juan José Salinero, David Sanz, Francisco Areces &amp; Juan del Coso (2015). Professional tennis is getting older: Age for the top 100 ranked tennis players. International Journal of Performance Analysis in Sport, 15:3, 873-883, DOI: 10.1080/24748668.2015.11868837</p>
+<p><sup>1</sup> Vaverka, Frantisek &amp; Cernosek, Miroslav (2013). Association between body height and serve speed in elite tennis players. Sports Biomech, 12, 30-7, DOI: 10.1080/14763141.2012.670664.</p>
+<p><sup>2</sup> César Gallo-Salazar, Juan José Salinero, David Sanz, Francisco Areces &amp; Juan del Coso (2015). Professional tennis is getting older: Age for the top 100 ranked tennis players. International Journal of Performance Analysis in Sport, 15:3, 873-883, DOI: 10.1080/24748668.2015.11868837</p>
+<p><sup>3</sup> 10 Sporting events with the most prize money. (2017, September 10). PledgeSports. Retrieved from: <a href="https://www.pledgesports.org/2017/09/10-sporting-events-with-the-biggest-prize-money/">https://www.pledgesports.org/2017/09/10-sporting-events-with-the-biggest-prize-money/</a></p>
 <p><sup>4</sup> Slackman, J. (2020, January 30). JeffSackmann/tennis_atp. Retrieved from <a href="https://github.com/JeffSackmann/tennis_atp">https://github.com/JeffSackmann/tennis_atp</a></p>
 
 </div>
@@ -19617,7 +19640,7 @@ Prediction   l   w
   </div>
 </body>
 
- 
+
 
 
 </html>
